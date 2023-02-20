@@ -1,0 +1,91 @@
+
+
+
+
+.header{
+    width: 100%;
+    height: 80px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: rgb(220, 220, 220);
+    position: sticky;
+    top: 0;
+    box-shadow: rgba(0, 0, 0, 0.07) 0px 1px 2px, rgba(0, 0, 0, 0.07) 0px 2px 4px, rgba(0, 0, 0, 0.07) 0px 4px 8px, rgba(0, 0, 0, 0.07) 0px 8px 16px, rgba(0, 0, 0, 0.07) 0px 16px 32px, rgba(0, 0, 0, 0.07) 0px 32px 64px;
+}
+.header  a{
+    text-decoration: none;
+    color: black;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+.header .left img{
+    width: 100px;
+    height: 80px;
+}
+.header .center  ul li{
+    display: inline-block;
+    padding: 10px;
+    font-size: 18px;
+    font-weight: 700;
+
+    
+}
+
+
+.header .right .search{
+    height: 25px;
+    display: inline-block;
+}
+.header .right .search input{
+    border: none;
+    height: 25px;
+}
+.header .right .search p{
+    background-color: rgb(255, 255, 255);
+    width: 22px;
+    height: 17px;
+    display: inline-block;
+    cursor: pointer;
+}
+
+.header .right .icons{
+    display: inline-block;
+    height: 25px;
+}
+.header .right .icons .icon{
+    font-size: 18px;
+    padding:0 8px;
+}
+
+.main{
+    padding-top:100px ;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: space-around;
+    background-color: rgb(220, 220, 220);
+    
+}
+.main a,p{
+    text-decoration: none;
+    color: black;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    padding-bottom: 10px;
+
+}
+.main .card{
+    width: 250px;
+    height: 300px;
+    background-color: rgb(233, 233, 233);
+    text-align: center;
+}
+
+.main .boxes .card img{
+    width: 100%;
+}
+
+
+.homeMain img{
+    width: 100%;
+
+}
