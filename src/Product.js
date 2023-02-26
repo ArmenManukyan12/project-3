@@ -1,6 +1,6 @@
 import {Link, useParams} from 'react-router-dom'
 
-const productsData=[
+ const productsData=[
     {
         id:1,
         image:"img/zx.jpg",
@@ -25,9 +25,10 @@ const Product =()=>{
     const {id}=useParams();
     const product = productsData.find(el=>el.id === +id)
     return(
-        <div>
-            <img src={"/" +product.image} alt="" className="images"/>
+        <div className='card'>
+            <img src={"/" +product.image} alt="#" className="images"/>
             <h2>{product.name}</h2>
+            <p style={{wordBreak:" break-word"}}>adidasadidasadidasadidasadidasadidasadidasadidasadidasadidasadidasadidasadidasadidas</p>
             <p>{product.price}</p>
         </div>
     )

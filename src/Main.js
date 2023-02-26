@@ -20,6 +20,24 @@ const productsData=[
         name:"NiteBall",
         price:"145 $"
     },
+    {
+        id:4,
+        image:"img/zx.jpg",
+        name:"ZX",
+        price:"85 $"
+    },
+    {
+        id:5,
+        image:"img/jogger.jpg",
+        name:"Nite Jogger",
+        price:"102 $"
+    },
+    {
+        id:6,
+        image:"img/niteball.jpg",
+        name:"NiteBall",
+        price:"145 $"
+    },
 ];
 
 export default function Main(){
@@ -32,11 +50,13 @@ export default function Main(){
                       <div className="text_box">
                         <Link to={`/product/${el.id}`}><h4>{el.name}</h4></Link>
                         <p>{el.price}</p>
-                        <button className="btn">Add</button>
+                        <button className="btn" >Add</button>
                       </div>
                     </div>
                 )
             })}
         </div>
+        
     )
+
 }
