@@ -1,36 +1,26 @@
 import {Link, useParams} from 'react-router-dom'
-
- const productsData=[
-    {
-        id:1,
-        image:"img/zx.jpg",
-        name:"ZX",
-        price:"85 $"
-    },
-    {
-        id:2,
-        image:"img/jogger.jpg",
-        name:"Nite Jogger",
-        price:"102 $"
-    },
-    {
-        id:3,
-        image:"img/niteball.jpg",
-        name:"NiteBall",
-        price:"145 $"
-    },
-];
-
+import { useState,useEffect }from 'react'
+// import { Data } from './Data';
 const Product =()=>{
     const {id}=useParams();
-    const product = productsData.find(el=>el.id === +id)
+    const [shoes,setshoes] =useState([]);
+    // const product = shoes.find(el=>el.id === +id)
+
+    useEffect(()=>{
+        fetch("http://localhost:3000/cloths/" +id)
+        .then(res=>res.json())
+        .then(data=>setshoes(data))
+        
+    },[])
     return(
+        
         <div className='card'>
-            <img src={"/" +product.image} alt="#" className="images"/>
-            <h2>{product.name}</h2>
-            <p style={{wordBreak:" break-word"}}>adidasadidasadidasadidasadidasadidasadidasadidasadidasadidasadidasadidasadidasadidas</p>
-            <p>{product.price}</p>
+            <img src={ shoes.image} alt="#" className="images"/>
+            <h2>{shoes.name}</h2>
+            {/* <p style={{wordBreak:" break-word"}}>adidasadidasadidasadidasadidasadidasadidasadidasadidasadidasadidasadidasadidasadidas</p> */}
+            <p>{shoes.price}</p>
         </div>
     )
 }
 export default Product
+

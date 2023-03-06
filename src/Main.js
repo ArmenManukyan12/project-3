@@ -1,49 +1,17 @@
 import {Link} from 'react-router-dom'
+import { useState,useEffect }from 'react'
 
-
-const productsData=[
-    {
-        id:1,
-        image:"img/zx.jpg",
-        name:"ZX",
-        price:"85 $"
-    },
-    {
-        id:2,
-        image:"img/jogger.jpg",
-        name:"Nite Jogger",
-        price:"102 $"
-    },
-    {
-        id:3,
-        image:"img/niteball.jpg",
-        name:"NiteBall",
-        price:"145 $"
-    },
-    {
-        id:4,
-        image:"img/zx.jpg",
-        name:"ZX",
-        price:"85 $"
-    },
-    {
-        id:5,
-        image:"img/jogger.jpg",
-        name:"Nite Jogger",
-        price:"102 $"
-    },
-    {
-        id:6,
-        image:"img/niteball.jpg",
-        name:"NiteBall",
-        price:"145 $"
-    },
-];
 
 export default function Main(){
+    const [shoes,setshoes] =useState([]);
+    useEffect(()=>{
+        fetch("http://localhost:3000")
+        .then(res=>res.json())
+        .then(data=>setshoes(data))
+    },[])
     return(
         <div className='main'>
-            {productsData.map((el)=>{
+            {shoes.map((el)=>{
                 return(
                     <div key={el.id} className="card">
                       <img src={el.image} alt="" className="images" />
